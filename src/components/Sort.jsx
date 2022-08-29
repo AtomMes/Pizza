@@ -16,7 +16,7 @@ const Sort = () => {
   const sort = useSelector(selectSort);
   const sortRef = React.useRef();
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const onClickListItem = (obj) => {
     dispatch(setSort(obj));
     setOpen(false);

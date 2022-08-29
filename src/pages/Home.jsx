@@ -7,7 +7,7 @@ import {
   setCurrentPage,
   setFilters,
 } from "../redux/slices/filterSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import qs from "qs";
 
 import Categories from "../components/Categories";
@@ -77,7 +77,11 @@ export const Home = () => {
 
   const pizzas = items
     .filter((obj) => obj.name.toLowerCase().includes(searchValue.toLowerCase()))
-    .map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+    .map((obj) => (
+      <Link key={obj.id} to={`/pizza/${obj.id}`} >
+        <PizzaBlock  {...obj} />
+      </Link>
+    ));
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />
   ));
@@ -91,7 +95,7 @@ export const Home = () => {
         <Sort />
       </div>
       <h2 className="content__title">Все пиццы</h2>
-      {status == "error" ? (
+      {status === "error" ? (
         <div className="content__error-info">
           <h2>Произошла ошибка 😕</h2>
           <p>
@@ -101,7 +105,7 @@ export const Home = () => {
         </div>
       ) : (
         <div className="content__items">
-          {status == "loading" ? skeletons : pizzas}
+          {status === "loading" ? skeletons : pizzas}
         </div>
       )}
       <Pagination onChangePage={onChangePage} currentPage={currentPage} />

@@ -1,6 +1,6 @@
 [
     {
-     "id": 0,
+     "id": "0",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
      "name": "Пепперони Фреш с перцем",
      "types": [
@@ -17,7 +17,7 @@
      "rating": 4
     },
     {
-     "id": 1,
+     "id": "1",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
      "name": "Сырная",
      "types": [
@@ -32,7 +32,7 @@
      "rating": 6
     },
     {
-     "id": 2,
+     "id": "2",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
      "name": "Цыпленок барбекю",
      "types": [
@@ -47,7 +47,7 @@
      "rating": 4
     },
     {
-     "id": 3,
+     "id": "3",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
      "name": "Кисло-сладкий цыпленок",
      "types": [
@@ -63,7 +63,7 @@
      "rating": 2
     },
     {
-     "id": 4,
+     "id": "4",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
      "name": "Чизбургер-пицца",
      "types": [
@@ -80,7 +80,7 @@
      "rating": 8
     },
     {
-     "id": 5,
+     "id": "5",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
      "name": "Крэйзи пепперони",
      "types": [
@@ -95,7 +95,7 @@
      "rating": 2
     },
     {
-     "id": 6,
+     "id": "6",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
      "name": "Пепперони",
      "types": [
@@ -112,7 +112,7 @@
      "rating": 9
     },
     {
-     "id": 7,
+     "id": "7",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
      "name": "Маргарита",
      "types": [
@@ -129,7 +129,7 @@
      "rating": 10
     },
     {
-     "id": 8,
+     "id": "8",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
      "name": "Четыре сезона",
      "types": [
@@ -146,7 +146,7 @@
      "rating": 10
     },
     {
-     "id": 9,
+     "id": "9",
      "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
      "name": "Овощи и грибы 🌱",
      "types": [
@@ -163,7 +163,7 @@
      "rating": 7
     },
     {
-     "id": 10,
+     "id": "10",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/9853cd63a136490f9bb353d2e0eae59c_292x292.jpeg",
      "name": "Мясной Микс",
      "types": [
@@ -180,7 +180,7 @@
      "rating": 6
     },
     {
-     "id": 11,
+     "id": "11",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/02270e55a3204ccaaf26d75f0c817d28_292x292.jpeg",
      "name": "Белая Пепперони",
      "types": [
@@ -197,7 +197,7 @@
      "rating": 6
     },
     {
-     "id": 12,
+     "id": "12",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/5630c6ed3f394c7ba25e1ef79a67b7ee_292x292.jpeg",
      "name": "Ветчина и сыр",
      "types": [
@@ -214,7 +214,7 @@
      "rating": 6
     },
     {
-     "id": 13,
+     "id": "13",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/10abc7eb6428475c9263709a1266558c_292x292.jpeg",
      "name": "Сырная",
      "types": [
@@ -231,7 +231,7 @@
      "rating": 6
     },
     {
-     "id": 14,
+     "id": "14",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/1e3e653d3e9b4b77ae0bdacf8827f6f6_292x292.jpeg",
      "name": "Четыре сыра",
      "types": [
@@ -248,7 +248,7 @@
      "rating": 10
     },
     {
-     "id": 15,
+     "id": "15",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/7a8164f7c43646e19c20001eaec9b031_292x292.jpeg",
      "name": "Карбонара",
      "types": [
@@ -265,7 +265,7 @@
      "rating": 3
     },
     {
-     "id": 16,
+     "id": "16",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/f440c85c436a4284afad6ecfc43c1fab_292x292.jpeg",
      "name": "Чоризо фреш",
      "types": [
@@ -282,7 +282,7 @@
      "rating": 6
     },
     {
-     "id": 17,
+     "id": "17",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/b473722281944c78ae1d6532576f92fa_292x292.jpeg",
      "name": "Карбонара",
      "types": [
@@ -299,7 +299,7 @@
      "rating": 0
     },
     {
-     "id": 18,
+     "id": "18",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/af39a1a069eb48e58156bd48b925436e_292x292.jpeg",
      "name": "Овощи и гриль",
      "types": [
@@ -316,7 +316,7 @@
      "rating": 5
     },
     {
-     "id": 19,
+     "id": "19",
      "imageUrl": "https://cdn.dodostatic.net/static/Img/Products/20734006e66d427fb2cbb8fbb595b21e_292x292.jpeg",
      "name": "Колбаски барбекю",
      "types": [

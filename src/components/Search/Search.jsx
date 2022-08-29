@@ -8,19 +8,19 @@ export default function Search() {
   const [value, setValue] = React.useState('')
   const { searchValue, setSearchValue } = React.useContext(SearchContext);
 
+  
+  const onChangeInput = event => {
+    setValue(event.target.value)
+    updateSearchValue(event.target.value)
+  }
+  
   const updateSearchValue = React.useCallback(
     debounce((str) => {
       setSearchValue(str);
     }, 250),
     []
   );
-
-const onChangeInput = event => {
-  setValue(event.target.value)
-  updateSearchValue(event.target.value)
-}
-
-
+  
   return (
     <input
       value={value}
