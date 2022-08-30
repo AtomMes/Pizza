@@ -8,10 +8,8 @@ import Cart from "./pages/Cart";
 import FullPizza from "./pages/FullPizza";
 import MainLayout from "./layouts/MainLayout";
 
-export const SearchContext = React.createContext("");
-
 function App() {
-  const [searchValue, setSearchValue] = React.useState("");
+
 
   return (
     <div className="content">

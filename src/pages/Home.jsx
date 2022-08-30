@@ -25,20 +25,21 @@ export const Home = () => {
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
 
-  const { categoryId, sort, currentPage } = useSelector(selectFilter);
+  const { categoryId, sort, currentPage, searchValue } =
+    useSelector(selectFilter);
 
   const { items, status } = useSelector(selectPizzaData);
-  console.log(status);
 
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id));
   };
 
-  const getPizzas = async () => {
+  const getPizzas = () => {
+    const value = searchValue;
     const order = sort.sortProperty.includes("-") ? "asc" : "desc";
     const sortBy = sort.sortProperty.replace("-", "");
     const category = categoryId > 0 && `category=${categoryId}`;
-    dispatch(fetchPizzas({ order, sortBy, category, currentPage }));
+    dispatch(fetchPizzas({ order, sortBy, category, currentPage, value }));
   };
 
   React.useEffect(() => {
@@ -71,17 +72,13 @@ export const Home = () => {
 
   React.useEffect(() => {
     getPizzas();
-  }, [categoryId, sort.sortProperty, currentPage]);
+  }, [categoryId, sort.sortProperty, currentPage, searchValue]);
 
-  const { searchValue, setSearchValue } = React.useContext(SearchContext);
-
-  const pizzas = items
-    .filter((obj) => obj.name.toLowerCase().includes(searchValue.toLowerCase()))
-    .map((obj) => (
-      <Link key={obj.id} to={`/pizza/${obj.id}`} >
-        <PizzaBlock  {...obj} />
-      </Link>
-    ));
+  const pizzas = items.map((obj) => (
+    <Link key={obj.id} to={`/pizza/${obj.id}`}>
+      <PizzaBlock {...obj} />
+    </Link>
+  ));
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />
   ));
