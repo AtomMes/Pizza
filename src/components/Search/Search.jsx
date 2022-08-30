@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Search.module.scss";
-import { SearchContext } from "../../App";
+import { SearchContext } from "../../App.tsx";
 import debounce from "lodash.debounce";
 import { useDispatch } from "react-redux";
 import { setSearchValue } from "./../../redux/slices/filterSlice";

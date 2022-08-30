@@ -17,7 +17,6 @@ import { Skeleton } from "../components/PizzaBlock/Skeleton";
 import Pagination from "../components/Pagination/Pagination";
 import { fetchPizzas, selectPizzaData } from "../redux/slices/pizzaSlice";
 
-import { SearchContext } from "../App";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -75,9 +74,7 @@ export const Home = () => {
   }, [categoryId, sort.sortProperty, currentPage, searchValue]);
 
   const pizzas = items.map((obj) => (
-    <Link key={obj.id} to={`/pizza/${obj.id}`}>
-      <PizzaBlock {...obj} />
-    </Link>
+      <PizzaBlock key={obj.id} {...obj} />
   ));
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />
