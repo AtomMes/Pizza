@@ -9,7 +9,7 @@ const Search:React.FC = () =>  {
   const dispatch = useDispatch()
   const [value, setValue] = React.useState("");
 
-  const onChangeInput = (event:any) => {
+  const onChangeInput = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
     updateSearchValue(event.target.value);
   };
