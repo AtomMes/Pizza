@@ -1,22 +1,21 @@
 import React from "react";
 import s from "./Search.module.scss";
-import { SearchContext } from "../../App.tsx";
 import debounce from "lodash.debounce";
 import { useDispatch } from "react-redux";
-import { setSearchValue } from "./../../redux/slices/filterSlice";
+import { setSearchValue } from "../../redux/slices/filterSlice";
 
-export default function Search() {
+const Search:React.FC = () =>  {
 
   const dispatch = useDispatch()
   const [value, setValue] = React.useState("");
 
-  const onChangeInput = (event) => {
+  const onChangeInput = (event:any) => {
     setValue(event.target.value);
     updateSearchValue(event.target.value);
   };
 
   const updateSearchValue = React.useCallback(
-    debounce((str) => {
+    debounce((str:string) => {
       dispatch(setSearchValue(str));
     }, 250),
     []

@@ -4,7 +4,16 @@ import { Link } from "react-router-dom";
 import { addItem, selectCartItemById } from "../../redux/slices/cartSlice";
 const typeNames = ["тонкое", "традиционное"];
 
-function PizzaBlock({ id, name, price, sizes, imageUrl, types }) {
+type PizzaBlockProps = {
+  id:string;
+  name:string;
+  price:number;
+  sizes:number[];
+  imageUrl:string;
+  types:number[]
+}
+
+const  PizzaBlock:React.FC<PizzaBlockProps> = ({ id, name, price, sizes, imageUrl, types }) => {
   const dispatch = useDispatch();
 
   const cartItem = useSelector(selectCartItemById(id));
