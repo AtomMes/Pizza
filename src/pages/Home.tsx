@@ -33,13 +33,13 @@ export const Home: React.FC = () => {
   };
 
   const getPizzas = () => {
-    const value = searchValue;
+    const search = searchValue;
     const order = sort.sortProperty.includes("-") ? "asc" : "desc";
     const sortBy = sort.sortProperty.replace("-", "");
     const category = categoryId > 0 && `category=${categoryId}`;
     dispatch(
       //@ts-ignore
-      fetchPizzas({ order, sortBy, category, currentPage, value }));
+      fetchPizzas({ order, sortBy, category, currentPage, search }));
   };
 
   React.useEffect(() => {

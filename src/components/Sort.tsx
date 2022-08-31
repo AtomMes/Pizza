@@ -76,7 +76,7 @@ const Sort = () => {
             {sortList.map((obj, i) => (
               <li
                 key={i}
-                className={sort.sortProperty === i ? "active" : ""}
+                className={sort.sortProperty === obj.sortProperty ? "active" : ""}
                 onClick={() => onClickListItem(obj)}
               >
                 {obj.name}
