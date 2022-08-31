@@ -20,7 +20,9 @@ const  PizzaBlock:React.FC<PizzaBlockProps> = ({ id, name, price, sizes, imageUr
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
 
+    
   const addedCount = cartItem ? cartItem.count : 0;
+
 
   const onClickAdd = () => {
     const item:CartItem = {
@@ -30,9 +32,8 @@ const  PizzaBlock:React.FC<PizzaBlockProps> = ({ id, name, price, sizes, imageUr
       imageUrl,
       type: typeNames[activeType],
       size: sizes[activeSize],
-      count:0 ,
+      count:0
     };
-    console.log(item);
     dispatch(addItem(item));
   };
 
