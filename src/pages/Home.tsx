@@ -24,6 +24,9 @@ import {
 import { useAppDispatch } from "../redux/store";
 
 export const Home: React.FC = () => {
+
+
+
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isSearch = React.useRef(false);
@@ -34,9 +37,9 @@ export const Home: React.FC = () => {
 
   const { items, status } = useSelector(selectPizzaData);
 
-  const onChangeCategory = (idx: number) => {
+  const onChangeCategory = React.useCallback( (idx: number) => {
     dispatch(setCategoryId(idx));
-  };
+  },[])
 
   const getPizzas = () => {
     const search = searchValue;
@@ -101,11 +104,13 @@ export const Home: React.FC = () => {
 
   const onChangePage = (page: number) => dispatch(setCurrentPage(page));
 
+
+
   return (
     <div className="container">
       <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort />
+        <Sort value={sort}/>
       </div>
       <h2 className="content__title">Все пиццы</h2>
       {status === "error" ? (

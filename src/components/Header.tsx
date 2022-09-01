@@ -22,7 +22,7 @@ function Header() {
             </div>
           </div>
         </NavLink>
-        <Search />
+        {location.pathname !== "/cart" && <Search />}
           <div className="header__cart">
         {location.pathname !== "/cart" && (
             <NavLink to="cart" className="button button--cart">
