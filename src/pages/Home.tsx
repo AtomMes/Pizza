@@ -1,27 +1,28 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
-import {
-  setCategoryId,
-  setCurrentPage,
-} from "../redux/filter/slice";
 import { useNavigate } from "react-router-dom";
 
-import Categories from "../components/Categories";
-import Sort, { sortList } from "../components/Sort";
-import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
-import { Skeleton } from "../components/PizzaBlock/Skeleton";
-import Pagination from "../components/Pagination/Pagination";
 import { fetchPizzas } from "../redux/pizza/asyncActions";
 import { useAppDispatch } from "../redux/store";
 import { selectFilter } from "../redux/filter/selectors";
 import { selectPizzaData } from "../redux/pizza/selectors";
+import {
+  setCategoryId,
+  setCurrentPage,
+} from "../redux/filter/slice";
 
-export const Home: React.FC = () => {
+import Categories from "../components/Categories";
+import Sort  from "../components/Sort";
+import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
+import { Skeleton } from "../components/PizzaBlock/Skeleton";
+import Pagination from "../components/Pagination/Pagination";
+
+ const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
+
 
   const { categoryId, sort, currentPage, searchValue } =
     useSelector(selectFilter);
@@ -119,3 +120,5 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
+export default Home
