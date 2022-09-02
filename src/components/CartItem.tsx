@@ -1,19 +1,35 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import clsx from "clsx"
-import { addItem,  minusItem, removeItem } from "../redux/cart/slice";
+import clsx from "clsx";
+import { addItem, minusItem, removeItem } from "../redux/cart/slice";
 import { CartItem } from "../redux/cart/types";
 
-type CartItemProps = { id:string; name:string; type:string; price:number; size:number; count:number; imageUrl:string };
+type CartItemProps = {
+  id: string;
+  name: string;
+  type: string;
+  price: number;
+  size: number;
+  count: number;
+  imageUrl: string;
+};
 
-const CartItemBlock:React.FC<CartItemProps> = ({ id, name, type, price, size, count, imageUrl }) => {
+const CartItemBlock: React.FC<CartItemProps> = ({
+  id,
+  name,
+  type,
+  price,
+  size,
+  count,
+  imageUrl,
+}) => {
   const dispatch = useDispatch();
 
   const onClickPlus = () => {
     dispatch(
       addItem({
         id,
-      }as CartItem)
+      } as CartItem)
     );
   };
 
@@ -43,7 +59,7 @@ const CartItemBlock:React.FC<CartItemProps> = ({ id, name, type, price, size, co
       </div>
       <div className="cart__item-count">
         <button
-        disabled={count === 1 }
+          disabled={count === 1}
           onClick={onClickMinus}
           className="button button--outline button--circle cart__item-count-minus"
         >

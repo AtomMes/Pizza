@@ -28,7 +28,7 @@ type SortPopupProps = {
   value:Sort
 }
 
-const SortPopup:React.FC<SortPopupProps> =React.memo( ({value}) => {
+const SortPopup:React.FC<SortPopupProps> = React.memo( ({value}) => {
   
   const dispatch = useDispatch();
   const sortRef = React.useRef<HTMLDivElement>(null);
@@ -52,8 +52,7 @@ const SortPopup:React.FC<SortPopupProps> =React.memo( ({value}) => {
       document.body.removeEventListener("click", handleClickOutside)
     }
 
-  }, []);
-
+  }, []); 
 
   return (
     <div ref={sortRef} className="sort">
